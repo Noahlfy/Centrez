@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cg3d5^)vd^lre$do^pl=yl$ciwtl8uq5kyis44=@*)kxmro#=1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,13 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
-    'grand_livre',
+    'comptabilite',
     'associations',
     
 ]
 
 MIDDLEWARE = [
+    
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +54,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:1000',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -79,10 +88,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'compta_asso',  # Replace with your actual database name
-        'USER': 'postgres',  # Replace with your actual database user
-        'PASSWORD': 'Postgres_300804',  # Replace with your actual database password
-        'HOST': 'localhost',  # Or your DB host
+        'NAME': 'compta_asso',  
+        'USER': 'postgres',  
+        'PASSWORD': 'Postgres_300804',  
+        'HOST': 'localhost', 
         'PORT': '5432',  # Default PostgreSQL port
     }
 }

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class GrandLivreConfig(AppConfig):
+class ComptabiliteConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'grand_livre'
+    name = 'comptabilite'

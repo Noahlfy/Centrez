@@ -1,0 +1,176 @@
+
+    /* Variables de couleurs */
+:root {
+      --color-bg: #FFEFD3;          /* beige clair */
+      --color-text: #001B2E;        /* bleu très foncé */
+      --color-primary: #294C60;     /* bleu moyen */
+      --color-primary-dark: #1F3B4B; /* version plus sombre pour hover */
+      --color-accent: #ADB6C4;      /* gris bleu clair */
+      --color-white: #FFFFFF;
+      --color-shadow: rgba(0, 27, 46, 0.1);
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+/* Barre de navigation */
+
+#nav_container * {
+    color: white;
+    text-decoration: none;
+}
+
+#nav_container, #nav_container > nav, ul {
+  position: relative;
+  background-color: var(--color-primary-dark);
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+}
+
+#nav_container nav ul {
+  list-style-type: none;
+}
+
+#nav_container > nav > ul > li {
+  float: left;
+  width: 14.15%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#nav_container nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.deroulant > .sous {
+ display: none;
+ position: absolute;
+ z-index: 1000;
+ box-shadow: 0px 1px 2px #ccc;
+ width: 14.15%;
+ font-size:15px;
+}
+
+nav > ul > li:hover .sous {
+  display: block;
+}
+
+.sous > li {
+  float: none;
+  width: 100%;
+  text-align: left;
+  background-color: #1F3B4B;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+
+nav a:hover {
+  color: #001B2E;
+  border-bottom: 2px solid orange;
+}
+
+.deroulant > a::after {
+  content: " ▼";
+  font-size: 14px;
+}
+
+
+/* Fenêtres dynamiques */
+
+#fenetres {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+#onglets {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 7px; /* espace entre les onglets */
+  padding: 5px;
+  width: 100%;
+
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  background-color: #CCC;
+  cursor: pointer;
+  padding: 0 6px;
+  border-radius: 5px 5px 0px 0px;
+  height: 33px;
+  font-size: 14px;
+}
+
+.tab-button:active {
+  background-color: #1F3B4B;
+}
+
+.tab-button button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#fermer-onglet {
+  margin-left: 8px;
+  color: black;
+}
+
+#fermer-onglet:hover {
+  color: rgb(201, 80, 80);
+}
+
+.tab {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 10px solid #ccc;
+  padding: 10px;
+}
+
+
+
+
+/* Tableau de base */
+
+#tableau {
+  position: fixed;
+  background-color: #FFFFFF;
+  z-index: 0;
+}
+
+.nom_colonne {
+  border: 1px solid black;
+  margin: 0;
+  padding: 10px;
+}
+
+.case {
+  margin: 0;
+  border: 1px solid black;
+}

@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from grand_livre.views import GrandLivreViewSet
+from comptabilite.views import ComptabiliteViewSet, CompteViewSet
 from associations.views import AssociationsViewSet
 
+
 router = routers.DefaultRouter()
-router.register("grand-livre", GrandLivreViewSet)
+router.register("comptabilite", ComptabiliteViewSet)
+router.register("comptes", CompteViewSet)
 router.register("associations", AssociationsViewSet)
 
 
