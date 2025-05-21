@@ -17,7 +17,7 @@ const currentTab = ref('')
 const tabs = ref([])
 const tabList = ref([
   {name: 'Accueil', component: Accueil, fixed: true},
-  {name: 'Comptabilite', component: Comptabilite, fixed: true},
+  {name: 'Comptabilité', component: Comptabilite, fixed: true},
   {name: 'Budget', component: Budget, fixed: true},
   {name: 'PiecesJustificatives', component: PiecesJustificatives, fixed: true},
   {name: 'EditionDeDocuments', component: EditionDeDocuments, fixed: true},
@@ -146,5 +146,53 @@ function fermerOnglet(tabName) {
     </div>
   </div>
 </template>
+
+<style scoped>
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #CCC;
+  cursor: pointer;
+  padding: 2px 16px;
+  border-radius: 32px 32px 32px 32px;
+  height: 33px;
+  font-size: 14px;
+}
+
+.active {
+  position: relative;
+  background-color: #CCC;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 12px solid #CCC;
+}
+
+.active:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: -40px;
+  height: 30px;
+  width: 40px;
+  background: transparent;
+  /* border-radius of pseudo element */
+  border-bottom-left-radius: 50%;
+  /* box shadow to give the shadow of the pseudo-element the same color as the background */
+  box-shadow: -10px 5px 0 0 #CCC;
+}
+.active:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: -40px;
+  height: 30px;
+  width: 40px;
+  background: transparent;
+  /* border-radius of pseudo element */
+  border-bottom-right-radius: 50%;
+  /* box shadow to give the shadow of the pseudo-element the same color as the background */
+  box-shadow: 10px 5px 0 0 #CCC;
+}
+</style>
 
 

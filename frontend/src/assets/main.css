@@ -105,27 +105,12 @@ nav a:hover {
 #onglets {
   height: 40px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 7px; /* espace entre les onglets */
-  padding: 5px;
   width: 100%;
-
+  padding: 0 10px;
 }
 
-.tab-button {
-  display: flex;
-  align-items: center;
-  background-color: #CCC;
-  cursor: pointer;
-  padding: 0 6px;
-  border-radius: 5px 5px 0px 0px;
-  height: 33px;
-  font-size: 14px;
-}
-
-.tab-button:active {
-  background-color: #1F3B4B;
-}
 
 .tab-button button {
   background: none;
