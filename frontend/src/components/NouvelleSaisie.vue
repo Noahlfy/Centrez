@@ -11,13 +11,8 @@ api('comptabilite', 'GET')
 
 </script>
 
-<template>
-
-        
-    <div>
-
-        
-
+<template>      
+    <div>     
         <div id="saisie">
             <div>
                 <h1>Ceci est le form pour réaliser une saisie</h1>

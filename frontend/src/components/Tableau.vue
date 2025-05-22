@@ -1,3 +1,7 @@
+<script setup>
+const column_names = ["Date", "Libellé", "Pièce justificative","Débit", "Crédit"];
+</script>
+
 <template>
   <table>
     <thead>
@@ -16,7 +20,3 @@
     </tbody>
   </table>
 </template>
-
-<script setup>
-const column_names = ["Date", "Libellé", "Pièce justificative","Débit", "Crédit"];
-</script>

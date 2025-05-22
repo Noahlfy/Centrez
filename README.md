@@ -43,7 +43,8 @@ Onglet "Juridique" : Rappel des échéances, modèles à utiliser, ...
 Ajouter une prévisualisation des pièces justificatives
 faire en sorte d'ajouter les pièces justificatives directement dans la ligne (et ça l'ajoute directement au répertoire ensuite) (demander le nom de la pièces pour cela)
 
-
+Suivi des subventions
+Faire l'import des Lydia automatiquement.
 
 # Détail de la structure
 
