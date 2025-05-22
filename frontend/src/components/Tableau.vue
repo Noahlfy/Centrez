@@ -20,4 +20,3 @@ const column_names = ["Date", "Libellé", "Pièce justificative","Débit", "Cré
     </tbody>
   </table>
 </template>
-
