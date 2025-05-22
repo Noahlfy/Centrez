@@ -19,6 +19,12 @@
 
 /* Barre de navigation */
 
+html, body, #app {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
 #nav_container * {
     color: white;
     text-decoration: none;
@@ -95,9 +101,6 @@ nav a:hover {
 /* Fenêtres dynamiques */
 
 #fenetres {
-  position: fixed;
-  top: 60px;
-  bottom: 0;
   width: 100%;
   background-color: white;
 }
@@ -128,15 +131,6 @@ nav a:hover {
   color: rgb(201, 80, 80);
 }
 
-.tab {
-  position: absolute;
-  top: 42px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border: 10px solid #ccc;
-  padding: 10px;
-}
 
 
 
